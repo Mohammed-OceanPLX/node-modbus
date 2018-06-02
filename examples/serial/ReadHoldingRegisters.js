@@ -13,7 +13,7 @@ socket.on('close', function () {
 })
 
 socket.on('open', function () {
-  client.readInputRegisters(1000, 1)
+  client.readHoldingRegisters(1000, 1)
     .then(function (resp) {
       console.log(resp)
       socket.close()
